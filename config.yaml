@@ -1,14 +1,14 @@
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
-name: MainnetZ DragonZ Indexer
-description: Indexer for DragonZ Series 1 contract
+name: MainnetZ Indexer
+description: Indexer testing
 networks:
   - id: 2016 # MainnetZ Mainnet
     rpc_config:
       url: https://mainnet-rpc.mainnetz.io
     start_block: 1
     contracts:
-      - name: erc721
-        address: "0x8222aa611aEe3EA1d3b2Fd6a0a4f3805bd175a48" #DragonZ Series 1
+      - name: erc20
+        address: "0xb30Cd83BF39CF94Af9d0Fdcc9a5F4c0c60dEBF18" #Netz Finance
         handler: src/EventHandlers.ts
         events:
           - event: "Approval(address indexed owner, address indexed spender, uint256 value)"
