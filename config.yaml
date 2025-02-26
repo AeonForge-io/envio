@@ -7,7 +7,7 @@ networks:
       url: https://mainnet-rpc.mainnetz.io
     start_block: 1
     contracts:
-      - name: DragonZ Series 1
+      - name: erc721
         address: "0x8222aa611aEe3EA1d3b2Fd6a0a4f3805bd175a48" #DragonZ Series 1
         handler: src/EventHandlers.ts
         events:
