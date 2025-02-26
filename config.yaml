@@ -5,15 +5,12 @@ networks:
   - id: 2016 # MainnetZ Mainnet
     rpc_config:
       url: https://mainnet-rpc.mainnetz.io
-    start_block: 1
+    start_block: 0
     contracts:
-      - name: Erc20
-        address: "0xb30Cd83BF39CF94Af9d0Fdcc9a5F4c0c60dEBF18" #Netz Finance
+      - name: NETZFI
+        address:
+          - 0xb30Cd83BF39CF94Af9d0Fdcc9a5F4c0c60dEBF18 #Netz Finance
         handler: src/EventHandlers.ts
         events:
-          - event: "Approval(address indexed owner, address indexed spender, uint256 value)"
-          - event: "Transfer(address indexed from, address indexed to, uint256 value)"
-# Unordered multichain mode allows you to index events from multiple chains
-# in realtime but doesn't guarentee ordering between chains
-# https://docs.envio.dev/docs/HyperIndex/multichain-indexing#unordered-multichain-mode
-unordered_multichain_mode: true
+          - event: Approval(address indexed owner, address indexed spender, uint256 value)
+          - event: Transfer(address indexed from, address indexed to, uint256 value)
