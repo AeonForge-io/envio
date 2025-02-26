@@ -7,7 +7,7 @@ networks:
       url: https://mainnet-rpc.mainnetz.io
     start_block: 1
     contracts:
-      - name: erc20
+      - name: Erc20
         address: "0xb30Cd83BF39CF94Af9d0Fdcc9a5F4c0c60dEBF18" #Netz Finance
         handler: src/EventHandlers.ts
         events:
